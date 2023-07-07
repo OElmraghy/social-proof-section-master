@@ -1,0 +1,212 @@
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  /* background-color: var(--light-grayish-magenta); */
+  letter-spacing: 0.3px;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 2rem;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .rating {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+.rating > div {
+  max-width: 380px;
+}
+
+.rating h1 {
+  color: var(--very-dark-magenta);
+  font-size: 3rem;
+}
+
+@media (max-width: 767px) {
+  .rating h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.rating p {
+  color: var(--dark-grayish-magenta);
+  margin-top: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.rating ul {
+  list-style: none;
+}
+
+.rating ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem 2rem;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .rating ul li {
+    flex-direction: column;
+  }
+  .rating ul {
+    width: 350px;
+  }
+}
+
+@media (min-width: 991px) {
+  .rating ul li:first-of-type {
+    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+  }
+
+  .rating ul li:nth-of-type(2) {
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+  }
+}
+
+.rating ul li span {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  padding-left: 1.3rem;
+}
+
+.rating ul li:not(:last-of-type) {
+  margin-bottom: 0.8rem;
+}
+
+@media (max-width: 991px) {
+  .rating ul {
+    margin-top: 2rem;
+  }
+}
+
+.reviews {
+  margin-top: 6rem;
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 991px) {
+  .reviews {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+}
+
+.reviews > div {
+  color: white;
+  max-width: 350px;
+  background-color: var(--very-dark-magenta);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+@media (min-width: 991px) {
+  .reviews > div:first-of-type {
+    transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+  }
+  .reviews > div:nth-of-type(2) {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+  }
+}
+
+.reviews .profile {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.reviews .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.reviews .profile h2 {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.reviews .profile span {
+  color: var(--soft-pink);
+}
+
+.reviews q {
+  display: block;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
